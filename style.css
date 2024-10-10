@@ -16,7 +16,7 @@ body {
 }
 
 ::selection {
-  color: #002756;
+  color: #074898;
   background: #003ec3;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 .wrapper .row section {
-  background: #99beff;
+  background: #b4d0eb;
   border-radius: 5px;
   width: calc(50% - 40px);
   padding: 20px;
@@ -62,7 +62,7 @@ body {
   content: "";
   height: 15px;
   width: 15px;
-  background: #003bc4;
+  background: #082c80;
   top: 28px;
   z-index: -1;
   transform: rotate(45deg);
@@ -79,15 +79,15 @@ body {
 .row section .icon,
 .center-line .scroll-icon {
   position: absolute;
-  background: #95b1f4;
+  background: #b4d0eb;
   height: 40px;
   width: 40px;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: #003bc4;
+  color: #082c80;
   font-size: 17px;
-  box-shadow: 0 0 0 4px #003bc4, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+  box-shadow: 0 0 0 4px #022473, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
 }
 
 .center-line .scroll-icon {
