@@ -135,13 +135,33 @@
     </div>
   </div>
   <script>
+    // Scroll Animation
     window.addEventListener('scroll', function() {
       const rows = document.querySelectorAll('.row');
-      rows.forEach(row => {
+      rows.forEach((row, index) => {
         const rect = row.getBoundingClientRect();
         if (rect.top < window.innerHeight - 100) {
-          row.classList.add('show');
+          setTimeout(() => {
+            row.classList.add('show');
+          }, index * 200); // Adds a delay between rows for staggered animation
         }
+      });
+    });
+
+    // Click Zoom Effect with Auto-Reset
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach(section => {
+      section.addEventListener('click', () => {
+        // Reset all sections
+        sections.forEach(sec => sec.style.transform = 'scale(1)');
+        // Zoom clicked section
+        section.style.transform = 'scale(1.1)';
+        
+        // Return to normal size after 3 seconds
+        setTimeout(() => {
+          section.style.transform = 'scale(1)';
+        }, 3000);
       });
     });
   </script>
