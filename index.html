@@ -134,5 +134,17 @@
       </section>
     </div>
   </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      const rows = document.querySelectorAll('.row');
+      rows.forEach(row => {
+        const rect = row.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          row.classList.add('show');
+        }
+      });
+    });
+  </script>
+  
 </body>
 </html>
