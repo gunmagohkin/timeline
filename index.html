@@ -137,37 +137,33 @@
       </section>
     </div>
   </div>
+ 
   <script>
-    // Scroll Animation
-    window.addEventListener('scroll', function() {
+    // Automatically make all rows visible on page load
+    window.addEventListener('DOMContentLoaded', () => {
       const rows = document.querySelectorAll('.row');
-      rows.forEach((row, index) => {
-        const rect = row.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          setTimeout(() => {
-            row.classList.add('show');
-          }, index * 200); // Adds a delay between rows for staggered animation
-        }
+      rows.forEach(row => {
+        row.classList.add('show');
       });
     });
-
-    // Click Zoom Effect with Auto-Reset
+    
+    // Zoom Effect with Auto-Reset
     const sections = document.querySelectorAll('section');
-
+    
     sections.forEach(section => {
       section.addEventListener('click', () => {
         // Reset all sections
         sections.forEach(sec => sec.style.transform = 'scale(1)');
         // Zoom clicked section
-        section.style.transform = 'scale(1.1)';
-        
-        // Return to normal size after 3 seconds
+        section.style.transform = 'scale(1.05)';
+        // Reset after 1 second
         setTimeout(() => {
           section.style.transform = 'scale(1)';
-        }, 3000);
+        }, 1000);
       });
     });
-  </script>
+    </script>
+    
   
 </body>
 </html>
